@@ -2,12 +2,12 @@ Package.describe({
   name: 'productiveme:cmsblocks',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'A content management solution for "mostly" static websites',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/productiveme/meteor-cmsblocks',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
-  documentation: 'README.md'
+  documentation: null
 });
 
 Package.onUse(function(api) {
