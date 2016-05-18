@@ -1,0 +1,33 @@
+<template name="cmsblocks_container">
+  {{#if canEdit}}
+  <cms class="{{containerCss}}" {{this}}>
+    {{#if this.markdown}}
+      {{#markdown}}{{> UI.contentBlock}}{{/markdown}}
+    {{else}}
+      {{> UI.contentBlock}}
+    {{/if}}
+    {{#if showIcon}}<span class="icon-pencil"></span>{{/if}}
+  </cms>
+  {{else}}
+    {{#if this.markdown}}
+      {{#markdown}}{{> UI.contentBlock}}{{/markdown}}
+    {{else}}
+      {{> UI.contentBlock}}
+    {{/if}}
+  {{/if}}
+</template>
+
+<template name="cmsblocks_editor">
+  <div class="cmsblocks_editor cmsblocks_reset">
+    <button type="button" class="overlay-close cancelBtn">&times;</button>
+    <form class="{{formCss}}">
+      <textarea class="txt">{{content}}</textarea>
+      <button type="button" class="updateBtn">Save</button>
+    </form>
+  </div>
+  {{#if showToolbar}}
+    <div class="cmsblocks_toolbar">
+      <button class="toggleEditMode"><span class="{{toggleClass}}"></span></button>
+    </div>
+  {{/if}}
+</template>
