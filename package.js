@@ -1,6 +1,6 @@
 Package.describe({
   name: 'productiveme:cmsblocks',
-  version: '0.0.3',
+  version: '0.0.4',
   // Brief, one-line summary of the package.
   summary: 'A content management solution for "mostly" static websites',
   // URL to the Git repository containing the source code for this package.
