@@ -15,13 +15,14 @@ Package.onUse(function(api) {
   api.use(['ecmascript','fourseven:scss@3.4.1','perak:markdown@1.0.5']);
   api.use(['templating','jquery','reactive-var', 'underscore'], 'client');
   api.addFiles(['lib/cmsblocks.html', 'lib/cmsblocks.scss'], 'client');
-  api.addFiles('lib/cmsblocks.js');
+  api.mainModule('lib/cmsblocks.js');
   api.addAssets([
     'fonts/icomoon.eot',
     'fonts/icomoon.svg',
     'fonts/icomoon.ttf',
     'fonts/icomoon.woff',
   ], 'client');
+  api.export('CMSBlocks');
 });
 
 Package.onTest(function(api) {

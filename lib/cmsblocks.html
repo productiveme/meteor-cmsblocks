@@ -1,3 +1,7 @@
+<template name="cmsblocks_idHelper">
+  {{#cmsblocks_container id=id markdown=this.markdown}}{{content}}{{/cmsblocks_container}}
+</template>
+
 <template name="cmsblocks_container">
   {{#if canEdit}}
   <cms class="{{containerCss}}" {{this}}>
