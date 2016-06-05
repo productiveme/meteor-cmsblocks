@@ -13,9 +13,9 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use(['ecmascript','fourseven:scss@3.4.1','perak:markdown@1.0.5']);
-  api.use(['templating','jquery','reactive-var', 'underscore'], 'client');
+  api.use(['templating','jquery','reactive-var', 'underscore', 'tracker'], 'client');
   api.addFiles(['lib/cmsblocks.html', 'lib/cmsblocks.scss'], 'client');
-  api.mainModule('lib/cmsblocks.js');
+  if(api.mainModule) api.mainModule('lib/cmsblocks.js');
   api.addAssets([
     'fonts/icomoon.eot',
     'fonts/icomoon.svg',
