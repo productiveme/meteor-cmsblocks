@@ -1,5 +1,5 @@
 .cmsblocks_editable {
-  display: inline-block;
+  &.blocky { display: inline-block; }
 
   &.cmsblocks_hover {
     cursor: pointer;

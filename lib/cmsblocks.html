@@ -1,22 +1,18 @@
-<template name="cmsblocks_idHelper">
-  {{#cmsblocks_container id=id markdown=this.markdown}}{{content}}{{/cmsblocks_container}}
-</template>
-
 <template name="cmsblocks_container">
   {{#if canEdit}}
-  <cms class="{{containerCss}}" {{this}}>
-    {{#if this.markdown}}
-      {{#markdown}}{{> UI.contentBlock}}{{/markdown}}
-    {{else}}
-      {{> UI.contentBlock}}
-    {{/if}}
-    {{#if showIcon}}<span class="icon-pencil"></span>{{/if}}
-  </cms>
+     <cms class="{{containerCss}}">
+       {{#if this.markdown}}
+         {{#markdown}}{{content}}{{/markdown}}
+       {{else}}
+         {{content}}
+       {{/if}}
+       {{#if showIcon}}<span class="icon-pencil"></span>{{/if}}
+     </cms>
   {{else}}
     {{#if this.markdown}}
-      {{#markdown}}{{> UI.contentBlock}}{{/markdown}}
+      {{#markdown}}{{content}}{{/markdown}}
     {{else}}
-      {{> UI.contentBlock}}
+      {{content}}
     {{/if}}
   {{/if}}
 </template>
@@ -25,8 +21,8 @@
   <div class="cmsblocks_editor cmsblocks_reset">
     <button type="button" class="overlay-close cancelBtn">&times;</button>
     <form class="{{formCss}}">
-      <textarea class="txt">{{content}}</textarea>
-      <button type="button" class="updateBtn">Save</button>
+      <textarea class="txt" placeholder="{{id}}">{{content}}</textarea>
+      <button type="button" class="{{buttonCss}}">Save</button>
     </form>
   </div>
   {{#if showToolbar}}
