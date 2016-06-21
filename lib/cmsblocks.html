@@ -21,7 +21,12 @@
   <div class="cmsblocks_editor cmsblocks_reset">
     <button type="button" class="overlay-close cancelBtn">&times;</button>
     <form class="{{formCss}}">
-      <textarea class="txt" placeholder="{{id}}">{{content}}</textarea>
+      {{#each translations}}
+        <label>{{this}}</label>
+        <textarea class="txt" placeholder="{{id}}" data-lang="{{this}}">{{translatedContent this}}</textarea>
+      {{else}}
+        <textarea class="txt" placeholder="{{id}}" data-lang="en">{{content}}</textarea>
+      {{/each}}
       <button type="button" class="{{buttonCss}}">Save</button>
     </form>
   </div>

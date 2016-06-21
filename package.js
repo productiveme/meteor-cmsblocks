@@ -12,20 +12,20 @@ Package.describe({
 
 Package.onUse(function(api) {
    api.versionsFrom('1.2.1');
-   api.use(['ecmascript','fourseven:scss@3.4.1','perak:markdown@1.0.5']);
+   api.use(['ecmascript','check','fourseven:scss@3.4.1','perak:markdown@1.0.5']);
    api.use(['templating','jquery','reactive-var', 'underscore', 'tracker'], 'client');
    api.addFiles(['lib/cmsblocks.html', 'lib/cmsblocks.scss', 'lib/cmsblocks.js', 'lib/cmsblocks-client.js'], 'client');
+   api.export('CMSBlocks');
    if(api.mainModule) {
       api.mainModule('lib/cmsblocks.js');
    }
-   api.export('CMSBlocks');
    api.addAssets([
       'fonts/icomoon.eot',
       'fonts/icomoon.svg',
       'fonts/icomoon.ttf',
       'fonts/icomoon.woff',
    ], 'client');
-});
+ });
 
 Package.onTest(function(api) {
    api.use(['ecmascript','tinytest']);
