@@ -22,10 +22,12 @@
     <button type="button" class="overlay-close cancelBtn">&times;</button>
     <form class="{{formCss}}">
       {{#each translations}}
-        <label>{{this}}</label>
-        <textarea class="txt" placeholder="{{id}}" data-lang="{{this}}">{{translatedContent this}}</textarea>
+        <div class="{{controlGroupCss}}">
+          <label class="{{labelCss}}">{{this}}</label>
+          <textarea class="{{inputCss}}" placeholder="{{id}}" data-lang="{{this}}">{{translatedContent this}}</textarea>
+        </div>
       {{else}}
-        <textarea class="txt" placeholder="{{id}}" data-lang="en">{{content}}</textarea>
+        <textarea class="{{inputCss}}" placeholder="{{id}}" data-lang="en">{{content}}</textarea>
       {{/each}}
       <button type="button" class="{{buttonCss}}">Save</button>
     </form>
