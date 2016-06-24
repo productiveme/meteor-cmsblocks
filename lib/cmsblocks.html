@@ -1,7 +1,7 @@
 <template name="cmsblocks_container">
   {{#if canEdit}}
      <cms class="{{containerCss}}">
-       {{#if this.markdown}}
+       {{#if md}}
          {{#markdown}}{{content}}{{/markdown}}
        {{else}}
          {{content}}
@@ -9,7 +9,7 @@
        {{#if showIcon}}<span class="icon-pencil"></span>{{/if}}
      </cms>
   {{else}}
-    {{#if this.markdown}}
+    {{#if md}}
       {{#markdown}}{{content}}{{/markdown}}
     {{else}}
       {{content}}
