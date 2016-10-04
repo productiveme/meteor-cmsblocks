@@ -6,7 +6,7 @@
        {{else}}
          {{content}}
        {{/if}}
-       {{#if showIcon}}<span class="icon-pencil"></span>{{/if}}
+       {{#if showIcon}}<span class="icon-pencil cmsblocks-icon"></span>{{/if}}
      </cms>
   {{else}}
     {{#if md}}
@@ -20,21 +20,12 @@
 <template name="cmsblocks_editor">
   <div class="cmsblocks_editor cmsblocks_reset">
     <button type="button" class="overlay-close cancelBtn">&times;</button>
-    <form class="{{formCss}}">
-      {{#each translations}}
-        <div class="{{controlGroupCss}}">
-          <label class="{{labelCss}}">{{this}}</label>
-          <textarea class="{{inputCss}}" placeholder="{{id}}" data-lang="{{this}}">{{translatedContent this}}</textarea>
-        </div>
-      {{else}}
-        <textarea class="{{inputCss}}" placeholder="{{id}}" data-lang="en">{{content}}</textarea>
-      {{/each}}
-      <button type="button" class="{{buttonCss}}">Save</button>
-    </form>
+    {{>Template.dynamic template=editorTemplate data=dataContext}}
   </div>
   {{#if showToolbar}}
     <div class="cmsblocks_toolbar">
-      <button class="toggleEditMode"><span class="{{toggleClass}}"></span></button>
+      <button class="toggleEditMode"><span class="cmsblocks-icon {{toggleClass}}"></span></button>
     </div>
   {{/if}}
 </template>
+

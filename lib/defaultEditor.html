@@ -1,0 +1,13 @@
+<template name="cmsblocks_defaultEditor">
+  <form class="{{formCss}}">
+      {{#each translations}}
+        <div class="{{../controlGroupCss}}">
+          <label class="{{../labelCss}}">{{this}}</label>
+          <textarea class="{{../inputCss}}" placeholder="{{../id}}" data-lang="{{this}}">{{translatedContent ../cmsblock this}}</textarea>
+        </div>
+      {{else}}
+        <textarea class="{{inputCss}}" placeholder="{{id}}" data-lang="en">{{content}}</textarea>
+      {{/each}}
+      <button type="button" class="{{buttonCss}}">Save</button>
+    </form>
+</template>
