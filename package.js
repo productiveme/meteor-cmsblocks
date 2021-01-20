@@ -1,6 +1,6 @@
 Package.describe({
   name: 'productiveme:cmsblocks',
-  version: '0.1.12',
+  version: '0.2.0',
   // Brief, one-line summary of the package.
   summary: 'A content management solution for "mostly" static websites',
   // URL to the Git repository containing the source code for this package.
@@ -11,11 +11,11 @@ Package.describe({
 });
 
 Package.onUse((api) => {
-  api.versionsFrom('1.2.1');
-  api.use(['ecmascript', 'check', 'fourseven:scss@3.4.1', 'perak:markdown@1.0.5']);
+  api.versionsFrom('1.8.2');
+  api.use(['ecmascript', 'check', 'perak:markdown@1.0.5']);
   api.use(['templating', 'jquery', 'reactive-var', 'underscore', 'tracker'], 'client');
   api.mainModule('lib/cmsblocks.js', ['client', 'server']);
-  api.addFiles(['lib/cmsblocks.html', 'lib/cmsblocks.scss', 'lib/cmsblocks-client.js', 'lib/defaultEditor.html', 'lib/defaultEditor.js'], 'client');
+  api.addFiles(['lib/cmsblocks.html', 'lib/cmsblocks.css', 'lib/cmsblocks-client.js', 'lib/defaultEditor.html', 'lib/defaultEditor.js'], 'client');
   api.export('CMSBlocks');
   api.addAssets([
     'fonts/icomoon.eot',

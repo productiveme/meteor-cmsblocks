@@ -1,0 +1,153 @@
+.cmsblocks_editable.blocky {
+    display: inline-block;
+  }
+  .cmsblocks_editable.cmsblocks_hover {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid red;
+  }
+  .cmsblocks_editable .cmsblocks_edit_button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    min-height: 1em;
+    max-height: 100%;
+    background: #DDD;
+    padding: 2px;
+    color: black;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    white-space: nowrap;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .cmsblocks_editor {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .cmsblocks_editor form {
+    margin: 1em auto !important;
+  }
+  .cmsblocks_editor.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+  }
+  .cmsblocks_editor .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    border: none;
+    font-size: 80px;
+    line-height: 80px;
+    color: white;
+    outline: none;
+    z-index: 500;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .cmsblocks_toolbar {
+    position: fixed;
+    bottom: 2em;
+    left: 1em;
+    z-index: 500;
+  }
+  .cmsblocks_toolbar .toggleEditMode {
+    font-size: 40px;
+    line-height: 40px;
+    opacity: 0.5;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  .cmsblocks_reset html, .cmsblocks_reset body, .cmsblocks_reset div, .cmsblocks_reset span, .cmsblocks_reset applet, .cmsblocks_reset object, .cmsblocks_reset iframe, .cmsblocks_reset h1, .cmsblocks_reset h2, .cmsblocks_reset h3, .cmsblocks_reset h4, .cmsblocks_reset h5, .cmsblocks_reset h6, .cmsblocks_reset p, .cmsblocks_reset blockquote, .cmsblocks_reset pre, .cmsblocks_reset a, .cmsblocks_reset abbr, .cmsblocks_reset acronym, .cmsblocks_reset address, .cmsblocks_reset big, .cmsblocks_reset cite, .cmsblocks_reset code, .cmsblocks_reset del, .cmsblocks_reset dfn, .cmsblocks_reset em, .cmsblocks_reset img, .cmsblocks_reset ins, .cmsblocks_reset kbd, .cmsblocks_reset q, .cmsblocks_reset s, .cmsblocks_reset samp, .cmsblocks_reset small, .cmsblocks_reset strike, .cmsblocks_reset strong, .cmsblocks_reset sub, .cmsblocks_reset sup, .cmsblocks_reset tt, .cmsblocks_reset var, .cmsblocks_reset b, .cmsblocks_reset u, .cmsblocks_reset i, .cmsblocks_reset center, .cmsblocks_reset dl, .cmsblocks_reset dt, .cmsblocks_reset dd, .cmsblocks_reset ol, .cmsblocks_reset ul, .cmsblocks_reset li, .cmsblocks_reset fieldset, .cmsblocks_reset form, .cmsblocks_reset label, .cmsblocks_reset legend, .cmsblocks_reset table, .cmsblocks_reset caption, .cmsblocks_reset tbody, .cmsblocks_reset tfoot, .cmsblocks_reset thead, .cmsblocks_reset tr, .cmsblocks_reset th, .cmsblocks_reset td, .cmsblocks_reset article, .cmsblocks_reset aside, .cmsblocks_reset canvas, .cmsblocks_reset details, .cmsblocks_reset embed, .cmsblocks_reset figure, .cmsblocks_reset figcaption, .cmsblocks_reset footer, .cmsblocks_reset header, .cmsblocks_reset menu, .cmsblocks_reset nav, .cmsblocks_reset output, .cmsblocks_reset ruby, .cmsblocks_reset section, .cmsblocks_reset summary, .cmsblocks_reset time, .cmsblocks_reset mark, .cmsblocks_reset audio, .cmsblocks_reset video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    /* HTML5 display-role reset for older browsers */
+  }
+  .cmsblocks_reset article, .cmsblocks_reset aside, .cmsblocks_reset details, .cmsblocks_reset figcaption, .cmsblocks_reset figure, .cmsblocks_reset footer, .cmsblocks_reset header, .cmsblocks_reset menu, .cmsblocks_reset nav, .cmsblocks_reset section {
+    display: block;
+  }
+  .cmsblocks_reset body {
+    line-height: 1;
+  }
+  .cmsblocks_reset ol, .cmsblocks_reset ul {
+    list-style: none;
+  }
+  .cmsblocks_reset blockquote, .cmsblocks_reset q {
+    quotes: none;
+  }
+  .cmsblocks_reset blockquote:before, .cmsblocks_reset q:before, .cmsblocks_reset blockquote:after, .cmsblocks_reset q:after {
+    content: '';
+    content: none;
+  }
+  .cmsblocks_reset q:before, .cmsblocks_reset q:after {
+    content: '';
+    content: none;
+  }
+  .cmsblocks_reset table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  @font-face {
+    font-family: 'icomoon';
+    src: url('/packages/productiveme_cmsblocks/fonts/icomoon.eot?9pin08');
+    src: url('/packages/productiveme_cmsblocks/fonts/icomoon.eot?9pin08#iefix') format('embedded-opentype'), url('/packages/productiveme_cmsblocks/fonts/icomoon.ttf?9pin08') format('truetype'), url('/packages/productiveme_cmsblocks/fonts/icomoon.woff?9pin08') format('woff'), url('/packages/productiveme_cmsblocks/fonts/icomoon.svg?9pin08#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .cmsblocks_editor .cmsblocks-icon[class^="icon-"], .cmsblocks_toolbar .cmsblocks-icon[class^="icon-"], cms .cmsblocks-icon[class^="icon-"], .cmsblocks_editor .cmsblocks-icon[class*=" icon-"], .cmsblocks_toolbar .cmsblocks-icon[class*=" icon-"], cms .cmsblocks-icon[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .cmsblocks_editor .cmsblocks-icon[class^="icon-"]:before, .cmsblocks_toolbar .cmsblocks-icon[class^="icon-"]:before, cms .cmsblocks-icon[class^="icon-"]:before, .cmsblocks_editor .cmsblocks-icon[class*=" icon-"]:before, .cmsblocks_toolbar .cmsblocks-icon[class*=" icon-"]:before, cms .cmsblocks-icon[class*=" icon-"]:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .cmsblocks_editor .icon-newspaper:before, .cmsblocks_toolbar .icon-newspaper:before, cms .icon-newspaper:before {
+    content: "\e900";
+  }
+  .cmsblocks_editor .icon-pencil:before, .cmsblocks_toolbar .icon-pencil:before, cms .icon-pencil:before {
+    content: "\e901";
+  }
+  
