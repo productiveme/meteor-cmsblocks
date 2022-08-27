@@ -13,7 +13,7 @@ Package.describe({
 Package.onUse((api) => {
   api.versionsFrom('1.8.2');
   api.use(['ecmascript', 'check', 'perak:markdown@1.0.5']);
-  api.use(['templating', 'jquery', 'reactive-var', 'underscore', 'tracker'], 'client');
+  api.use(['templating@1.4.1', 'jquery@1.11.11', 'reactive-var', 'underscore', 'tracker'], 'client');
   api.mainModule('lib/cmsblocks.js', ['client', 'server']);
   api.addFiles(['lib/cmsblocks.html', 'lib/cmsblocks.css', 'lib/cmsblocks-client.js', 'lib/defaultEditor.html', 'lib/defaultEditor.js'], 'client');
   api.export('CMSBlocks');
